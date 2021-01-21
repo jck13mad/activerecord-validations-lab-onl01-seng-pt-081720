@@ -5,6 +5,9 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: { in: %w(Fiction Non-Fiction) }
   
   CLICKBAIT_PATTERNS = [
-    
+    "Won't Believe",
+        "Secret",
+        "Top[number]",
+        "Guess"
   ]
 end
