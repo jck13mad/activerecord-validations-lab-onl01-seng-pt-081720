@@ -13,6 +13,7 @@ class Post < ActiveRecord::Base
   ]
   
   def title_include
-    if title.present? && CLICKBAIT_PATTERNS.none? {|p| title.match
+    if title.present? && CLICKBAIT_PATTERNS.none? {|p| title.match(p)}
+      
   end
 end
