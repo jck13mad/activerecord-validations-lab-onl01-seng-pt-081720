@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   validates :content, length: { minimum: 250 }
   validates :summary, length: { maximum: 250}
   validates :category, inclusion: { in: %w(Fiction Non-Fiction) }
-  validate :title_
+  validate :title_include
   
   CLICKBAIT_PATTERNS = [
     "Won't Believe",
@@ -11,4 +11,6 @@ class Post < ActiveRecord::Base
         "Top[number]",
         "Guess"
   ]
+  
+  def title_include
 end
