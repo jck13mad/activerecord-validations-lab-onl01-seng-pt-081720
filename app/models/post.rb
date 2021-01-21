@@ -13,4 +13,6 @@ class Post < ActiveRecord::Base
   ]
   
   def title_include
+    
+  end
 end
